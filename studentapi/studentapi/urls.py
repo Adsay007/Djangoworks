@@ -1,5 +1,5 @@
 """
-URL configuration for pro project.
+URL configuration for studentapi project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.1/topics/http/urls/
@@ -20,8 +20,6 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    path('',views.Home),
-
-    path('index',views.Index)
+    path('details',views.Studentdetails.as_view()),
+    path('list',views.StudentList.as_view()),
 ]
